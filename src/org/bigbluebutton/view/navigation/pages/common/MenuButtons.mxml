@@ -9,6 +9,7 @@
 	<fx:Script>
 		<![CDATA[
 			import mx.core.FlexGlobals;
+			
 			import org.bigbluebutton.view.navigation.pages.PagesENUM;
 		]]>
 	</fx:Script>
@@ -57,4 +58,17 @@
 						 width="100%"
 						 height="100%"
 						 styleName="participantsBtnStyle" />
+	<ui:NavigationButton id="documentsBtn0"
+						 navigateTo="{FlexGlobals.topLevelApplication.isTabletLandscape() ? [PagesENUM.SPLITDOCUMENTS] : [PagesENUM.DOCUMENTS,PagesENUM.DOCUMENT_DETAILS]}"
+						 width="100%"
+						 height="100%"
+						 styleName="documentsBtnStyle" />
+	<ui:NavigationButton id="pollsBtn0" 
+						 navigateTo="{[PagesENUM.POLLS_LIST]}" 
+						 width="100%" 
+						 height="100%"
+						 visible="true" 
+						 includeInLayout="true" 
+						 styleName="pollsBtnStyle" />
+	
 </s:Group>

@@ -47,6 +47,8 @@ package org.bigbluebutton.view.navigation.pages.profile {
 		
 		private var navigateToStatus:Function = navigateTo(PagesENUM.STATUS);
 		
+		private var navigateToNeeds:Function = navigateTo(PagesENUM.NEEDS);
+		
 		private var navigateToCameraSettings:Function = navigateTo(PagesENUM.CAMERASETTINGS);
 		
 		private var navigateToAudioSettings:Function = navigateTo(PagesENUM.AUDIOSETTINGS);
@@ -132,6 +134,7 @@ package org.bigbluebutton.view.navigation.pages.profile {
 		
 		private function addNavigationListeners():void {
 			view.statusButton.addEventListener(MouseEvent.CLICK, navigateToStatus);
+			view.needsButton.addEventListener(MouseEvent.CLICK, navigateToNeeds);
 			view.shareCameraButton.addEventListener(MouseEvent.CLICK, navigateToCameraSettings);
 			view.shareMicButton.addEventListener(MouseEvent.CLICK, navigateToAudioSettings);
 			view.lockViewersButton.addEventListener(MouseEvent.CLICK, navigateToLockSettings);
@@ -139,6 +142,7 @@ package org.bigbluebutton.view.navigation.pages.profile {
 		
 		private function removeNavigationListeners():void {
 			view.statusButton.removeEventListener(MouseEvent.CLICK, navigateToStatus);
+			view.needsButton.removeEventListener(MouseEvent.CLICK, navigateToNeeds);
 			view.shareCameraButton.removeEventListener(MouseEvent.CLICK, navigateToCameraSettings);
 			view.shareMicButton.removeEventListener(MouseEvent.CLICK, navigateToAudioSettings);
 			view.lockViewersButton.removeEventListener(MouseEvent.CLICK, navigateToLockSettings);

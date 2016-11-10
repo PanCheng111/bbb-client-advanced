@@ -56,7 +56,7 @@ package org.bigbluebutton.core.util {
 		private function setUserAgent():void {
 			// AirCapabilities ANE to get the device information
 			var airCap:AirCapabilities = new AirCapabilities();
-			var deviceName:String = airCap.getMachineName();
+			var deviceName:String = "";//airCap.getMachineName();
 			if (deviceName != "") {
 				// include device name in the user agent looking for the first ")" character as follows:
 				// Mozilla/5.0 (Android; U; pt-BR<; DEVICE NAME>) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/16.0
@@ -64,7 +64,7 @@ package org.bigbluebutton.core.util {
 				userAgent[0] += "; " + deviceName;
 				_urlRequest.userAgent = userAgent.join(")");
 			}
-			var OSVersion:String = airCap.getOSVersion();
+			var OSVersion:String = ""; //airCap.getOSVersion();
 			if (OSVersion != "") {
 				// include os version in the user agent looking for the first ";" character as follows:
 				// Mozilla/5.0 (Android< OSVERSION>; U; pt-BR) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/16.0

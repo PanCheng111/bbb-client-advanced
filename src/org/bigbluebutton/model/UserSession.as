@@ -1,8 +1,10 @@
 package org.bigbluebutton.model {
 	
 	import flash.net.NetConnection;
+	
 	import mx.collections.ArrayCollection;
 	import mx.collections.ArrayList;
+	
 	import org.bigbluebutton.core.IBigBlueButtonConnection;
 	import org.bigbluebutton.core.IDeskshareConnection;
 	import org.bigbluebutton.core.IVideoConnection;
@@ -11,7 +13,10 @@ package org.bigbluebutton.model {
 	import org.bigbluebutton.core.VoiceConnection;
 	import org.bigbluebutton.core.VoiceStreamManager;
 	import org.bigbluebutton.model.chat.ChatMessages;
+	import org.bigbluebutton.model.polling.PollModel;
 	import org.bigbluebutton.model.presentation.PresentationList;
+	import org.bigbluebutton.model.whiteboard.WhiteboardCanvasModel;
+	import org.bigbluebutton.modules.whiteboard.models.Whiteboard;
 	import org.hamcrest.core.throws;
 	import org.osflash.signals.ISignal;
 	import org.osflash.signals.Signal;
@@ -88,6 +93,10 @@ package org.bigbluebutton.model {
 		protected var _videoProfileManager:VideoProfileManager = new VideoProfileManager();
 		
 		protected var _globalVideoProfile:VideoProfile = _videoProfileManager.defaultVideoProfile;
+		
+		protected var _pollModel:PollModel;
+		
+		protected var _whiteboardCanvasModel: WhiteboardCanvasModel;
 		
 		public function get videoProfileManager():VideoProfileManager {
 			return _videoProfileManager;
@@ -229,7 +238,17 @@ package org.bigbluebutton.model {
 			_guestList = new UserList();
 			_presentationList = new PresentationList();
 			_lockSettings = new LockSettings();
+			_pollModel = new PollModel();
+			_whiteboardCanvasModel = new WhiteboardCanvasModel();
 			userList.userChangeSignal.add(userChangedHandler);
+		}
+		
+		public function get pollModel():PollModel {
+			return _pollModel;
+		}
+		
+		public function get whiteboardCanvasModel():WhiteboardCanvasModel {
+			return _whiteboardCanvasModel;
 		}
 		
 		public function get presentationList():PresentationList {

@@ -26,6 +26,9 @@ package org.bigbluebutton.view.navigation.pages.participants {
 	import spark.components.Button;
 	import spark.events.IndexChangeEvent;
 	
+	import mx.core.mx_internal;
+	use namespace mx_internal;
+	
 	public class ParticipantsViewMediator extends Mediator {
 		
 		[Inject]

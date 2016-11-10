@@ -31,6 +31,10 @@ package org.bigbluebutton.view.navigation.pages.profile {
 			return statusBtn0;
 		}
 		
+		public function get needsButton():Button {
+			return needsBtn0;
+		}
+		
 		public function get shareMicBtnLabel():String {
 			return shareMicBtn0.label;
 		}

@@ -5,6 +5,73 @@
 @namespace skins "org.bigbluebutton.view.skins.*";
 @namespace common "org.bigbluebutton.view.navigation.pages.common.*";
 
+s|VGroup.whiteboardToolbarStyle {
+	backgroundColor: #CCCCCC;
+	cornerRadius: 5;
+	borderStyle: solid;
+	borderThickness: 1;
+	paddingBottom: 3;
+	paddingTop: 3;
+	paddingLeft: 3;
+	paddingRight: 3;
+}
+
+
+s|ToggleButton.whiteboardUndoButtonStyle, s|ToggleButton.whiteboardCircleButtonStyle, s|ToggleButton.whiteboardClearButtonStyle,
+s|ToggleButton.whiteboardTriangleButtonStyle, s|ToggleButton.whiteboardTextButtonStyle, s|ToggleButton.whiteboardRectangleButtonStyle,
+s|ToggleButton.whiteboardPanZoomButtonStyle, s|ToggleButton.whiteboardLineButtonStyle, s|ToggleButton.whiteboardScribbleButtonStyle
+{
+	textIndent: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 5;
+	paddingBottom: 5;
+	highlightAlphas: 0.4, 0;
+	fillAlphas: 1, 1, 1, 1;
+	color:#FFFFFF;
+	chromeColor:#DBDBDB;
+	fontFamily: Arial;
+	fontSize: 12;
+}
+
+s|ToggleButton.whiteboardUndoButtonStyle 
+{
+	icon: Embed('assets/images/undo.png');
+}
+
+s|ToggleButton.whiteboardCircleButtonStyle {
+	icon: Embed('assets/images/ellipse.png');  
+}
+
+s|ToggleButton.whiteboardClearButtonStyle {
+	icon: Embed('assets/images/delete.png');    
+}
+
+s|ToggleButton.whiteboardScribbleButtonStyle{
+	icon: Embed('assets/images/pencil.png');  
+}
+
+s|ToggleButton.whiteboardLineButtonStyle {
+	icon: Embed('assets/images/line.png');    
+}
+
+s|ToggleButton.whiteboardPanZoomButtonStyle {
+	icon: Embed('assets/images/hand.png');   
+}
+
+s|ToggleButton.whiteboardRectangleButtonStyle {
+	icon: Embed('assets/images/square.png');   
+}
+
+s|ToggleButton.whiteboardTextButtonStyle {
+	icon: Embed('assets/images/text.png');   
+}
+
+s|ToggleButton.whiteboardTriangleButtonStyle {
+	icon: Embed('assets/images/triangle.png');    
+}
+
+
 s|List.cameraProfilesListStyle
 {
 	verticalScrollPolicy: off;
@@ -138,6 +205,11 @@ s|Button.newMessagesButtonStyle
 s|RadioButton
 {
 	skinClass: ClassReference("org.bigbluebutton.view.skins.RadioButtonSkin");
+}
+
+s|CheckBox
+{
+	skinClass: ClassReference("org.bigbluebutton.view.skins.CheckBoxSkin")	
 }
 
 s|Image.bbbLogoStyle
@@ -360,6 +432,17 @@ s|Image.bigbbbLogoStyle
 		loadingImageSource: "assets/res/drawable-mdpi/videoLoading.png";
 	}
 	
+	ui|NavigationButton.pollsBtnStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-mdpi/polling.png");
+	}
+	
+	s|CheckBox
+	{
+		height: 40;
+		width: 40;
+	}
+	
 	s|View.chatViewStyle
 	{
 		chatInputTextHeight:48;
@@ -412,6 +495,11 @@ s|Image.bigbbbLogoStyle
 		backgroundImage: Embed(source="assets/res/drawable-mdpi/participants.png");	
 	}
 	
+	ui|NavigationButton.documentsBtnStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-mdpi/documents.png");	
+	}
+	
 	ui|NavigationButton.deskshareBtnStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-mdpi/deskshare.png");
@@ -438,6 +526,11 @@ s|Image.bigbbbLogoStyle
 	s|Button.audioSettingsButtonStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-mdpi/microphone.png");
+	}
+	
+	s|Button.pencilSettingsButtonStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-mdpi/pencil.png");
 	}
 	
 	s|Button.audioSettingsShareMicButtonStyle
@@ -630,6 +723,11 @@ s|Image.bigbbbLogoStyle
 		backgroundImage: Embed(source="assets/res/drawable-mdpi/user.png");
 	}
 	
+	s|Image.pencilIconStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-mdpi/pencil.png");
+	}
+	
 	s|Image.arrowRightStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-mdpi/arrowRight.png");
@@ -759,6 +857,17 @@ s|Image.bigbbbLogoStyle
 	s|Button.cameraSettingsSwapButtonStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-hdpi/SwapCamera_up.png");
+	}
+	
+	ui|NavigationButton.pollsBtnStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-hdpi/polling.png");
+	}
+	
+	s|CheckBox
+	{
+		height: 60;
+		width: 60;
 	}
 	
 	s|View.cameraSettingsViewStyle
@@ -895,6 +1004,11 @@ s|Image.bigbbbLogoStyle
 		backgroundImage: Embed(source="assets/res/drawable-hdpi/microphone.png");
 	}
 	
+	s|Button.pencilSettingsButtonStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-hdpi/pencil.png");
+	}
+	
 	s|Button.audioSettingsShareMicButtonStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-hdpi/microphone.png");
@@ -968,6 +1082,11 @@ s|Image.bigbbbLogoStyle
 	ui|NavigationButton.participantsBtnStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-hdpi/participants.png");	
+	}
+	
+	ui|NavigationButton.documentsBtnStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-hdpi/documents.png");	
 	}
 	
 	ui|NavigationButton.deskshareBtnStyle
@@ -1107,6 +1226,11 @@ s|Image.bigbbbLogoStyle
 	s|Image.userIconStyle, s|Button.noStatusButtonStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-hdpi/user.png");
+	}
+	
+	s|Image.pencilIconStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-hdpi/pencil.png");
 	}
 	
 	s|Image.arrowRightStyle
@@ -1324,6 +1448,17 @@ s|Image.bigbbbLogoStyle
 		loadingImageSource: "assets/res/drawable-xhdpi/videoLoading.png";
 	}
 	
+	ui|NavigationButton.pollsBtnStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-xhdpi/polling.png");
+	}
+	
+	s|CheckBox
+	{
+		height: 80;
+		width: 80;
+	}
+	
 	s|View.chatViewStyle
 	{
 		chatInputTextHeight:96;
@@ -1372,6 +1507,11 @@ s|Image.bigbbbLogoStyle
 	s|Button.audioSettingsButtonStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-xhdpi/microphone.png");
+	}
+	
+	s|Button.pencilSettingsButtonStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-xhdpi/pencil.png");
 	}
 	
 	s|Button.audioSettingsShareMicButtonStyle
@@ -1447,6 +1587,11 @@ s|Image.bigbbbLogoStyle
 	ui|NavigationButton.participantsBtnStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-xhdpi/participants.png");	
+	}
+	
+	ui|NavigationButton.documentsBtnStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-xhdpi/documents.png");	
 	}
 	
 	ui|NavigationButton.deskshareBtnStyle
@@ -1586,6 +1731,11 @@ s|Image.bigbbbLogoStyle
 	s|Image.userIconStyle, s|Button.noStatusButtonStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-xhdpi/user.png");
+	}
+	
+	s|Image.pencilIconStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-xhdpi/pencil.png");
 	}
 	
 	s|Image.arrowRightStyle
@@ -1798,6 +1948,18 @@ s|Image.bigbbbLogoStyle
 		loadingImageSource: "assets/res/drawable-xxhdpi/videoLoading.png";
 	}
 	
+	ui|NavigationButton.pollsBtnStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-xxhdpi/polling.png");
+	}
+	
+	s|CheckBox
+	{
+		height: 120;
+		width: 120;
+	}
+
+	
 	s|View.chatViewStyle
 	{
 		chatInputTextHeight:144;
@@ -1850,6 +2012,11 @@ s|Image.bigbbbLogoStyle
 		backgroundImage: Embed(source="assets/res/drawable-xxhdpi/participants.png");		
 	}
 	
+	ui|NavigationButton.documentsBtnStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-xxhdpi/documents.png");		
+	}
+	
 	ui|NavigationButton.deskshareBtnStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-xxhdpi/deskshare.png");
@@ -1876,6 +2043,11 @@ s|Image.bigbbbLogoStyle
 	s|Button.audioSettingsButtonStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-xxhdpi/microphone.png");
+	}
+	
+	s|Button.pencilSettingsButtonStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-xxhdpi/pencil.png");
 	}
 	
 	s|Button.audioSettingsShareMicButtonStyle
@@ -2067,6 +2239,11 @@ s|Image.bigbbbLogoStyle
 	s|Image.userIconStyle, s|Button.noStatusButtonStyle
 	{
 		backgroundImage: Embed(source="assets/res/drawable-xxhdpi/user.png");
+	}
+	
+	s|Image.pencilIconStyle
+	{
+		backgroundImage: Embed(source="assets/res/drawable-xxhdpi/pencil.png");
 	}
 	
 	s|Image.arrowRightStyle

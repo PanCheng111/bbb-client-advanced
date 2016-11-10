@@ -48,6 +48,8 @@ package org.bigbluebutton {
 	import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 	import robotlegs.bender.framework.api.IConfig;
 	import robotlegs.bender.framework.api.IInjector;
+	import org.bigbluebutton.core.IPollService;
+	import org.bigbluebutton.core.PollService;
 	
 	public class AppConfig implements IConfig {
 		
@@ -69,6 +71,7 @@ package org.bigbluebutton {
 			injector.map(IChatMessagesSession).toSingleton(ChatMessagesSession);
 			injector.map(IDeskshareConnection).toSingleton(DeskshareConnection);
 			injector.map(ISaveData).toSingleton(SaveData);
+			injector.map(IPollService).toSingleton(PollService);
 			// Type mapping
 			injector.map(IBaseConnection).toType(BaseConnection);
 			injector.map(IVoiceConnection).toType(VoiceConnection);

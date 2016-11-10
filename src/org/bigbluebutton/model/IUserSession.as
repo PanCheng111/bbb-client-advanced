@@ -2,7 +2,9 @@ package org.bigbluebutton.model {
 	
 	import flash.media.Video;
 	import flash.net.NetConnection;
+	
 	import mx.collections.ArrayCollection;
+	
 	import org.bigbluebutton.core.IBigBlueButtonConnection;
 	import org.bigbluebutton.core.IDeskshareConnection;
 	import org.bigbluebutton.core.IVideoConnection;
@@ -12,7 +14,9 @@ package org.bigbluebutton.model {
 	import org.bigbluebutton.core.VoiceConnection;
 	import org.bigbluebutton.core.VoiceStreamManager;
 	import org.bigbluebutton.model.chat.ChatMessages;
+	import org.bigbluebutton.model.polling.PollModel;
 	import org.bigbluebutton.model.presentation.PresentationList;
+	import org.bigbluebutton.model.whiteboard.WhiteboardCanvasModel;
 	import org.osflash.signals.ISignal;
 	import org.osflash.signals.Signal;
 	
@@ -71,5 +75,8 @@ package org.bigbluebutton.model {
 		function get pushToTalk():Boolean;
 		function set pushToTalk(value:Boolean):void;
 		function get pushToTalkSignal():ISignal;
+		function get pollModel():PollModel;
+		function get whiteboardCanvasModel():WhiteboardCanvasModel;
+		
 	}
 }

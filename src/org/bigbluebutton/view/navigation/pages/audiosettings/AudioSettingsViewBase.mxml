@@ -110,7 +110,7 @@
 				<s:HSlider id="gainSlider0"
 						   width="90%"
 						   value="5"
-						   skinClass="spark.skins.android4.HSliderSkin" />
+						   skinClass="spark.skins.mobile.HSliderSkin" />
 			</s:HGroup>
 			<s:Line width="90%">
 				<s:stroke>

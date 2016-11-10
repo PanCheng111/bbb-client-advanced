@@ -44,6 +44,10 @@ package org.bigbluebutton.model.presentation {
 		public function PresentationList() {
 		}
 		
+		public function get presentations():ArrayCollection {
+			return _presentations;
+		}
+		
 		public function addPresentation(presentationName:String, id:String, numberOfSlides:int, current:Boolean):Presentation {
 			trace("Adding presentation " + presentationName);
 			for (var i:int = 0; i < _presentations.length; i++) {

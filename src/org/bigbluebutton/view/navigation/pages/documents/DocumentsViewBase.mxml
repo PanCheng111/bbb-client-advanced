@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view:NoTabView xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				xmlns:mx="library://ns.adobe.com/flex/mx"
+				xmlns:view="org.bigbluebutton.core.view.*"
+				xmlns:documents="org.bigbluebutton.view.navigation.pages.documents.*"
+				styleName="roomItemStyle" >
+	<s:Group width="100%"
+			 height="100%">
+		<s:layout>
+			<s:VerticalLayout />
+		</s:layout>
+		<documents:DocumentsList id="documentslist"
+									   width="100%"
+									   height="100%" />
+	</s:Group>
+</view:NoTabView>

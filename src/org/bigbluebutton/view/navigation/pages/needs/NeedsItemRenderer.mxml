@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				xmlns:mx="library://ns.adobe.com/flex/mx"
+				styleName="participantItemStyle">
+
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			import org.bigbluebutton.model.User;
+			
+			override public function set data(obj:Object):void {
+				super.data = obj;
+				if (obj) {
+					profileIcon.visible = profileIcon.includeInLayout = obj.signal == User.NO_STATUS;
+					pencilIcon.visible = pencilIcon.includeInLayout = obj.signal == "NEED_PENCIL";
+		//			handIcon.visible = handIcon.includeInLayout = obj.signal == User.RAISE_HAND;
+		//			agreeIcon.visible = agreeIcon.includeInLayout = obj.signal == User.AGREE;
+				}
+			}
+		]]>
+	</fx:Script>
+	<s:Group width="100%"
+			 height="{getStyle('itemHeight')}">
+		<s:layout>
+			<s:HorizontalLayout verticalAlign="middle"
+								paddingLeft="{getStyle('itemPaddingLeft')}"
+								paddingRight="{getStyle('itemPaddingRight')}" />
+		</s:layout>
+		<s:Image id="profileIcon"
+				 styleName="iconStyle userIconStyle"
+				 height="100%" />
+		
+		<s:Image id="pencilIcon"
+				 styleName="iconStyle pencilIconStyle"
+				 height="100%" />
+		
+		<s:Group width="70%">
+			<s:layout>
+				<s:VerticalLayout />
+			</s:layout>
+			<s:Label id="labelDisplay"
+					 width="100%"
+					 height="100%"
+					 styleName="contentFontSize" />
+		</s:Group>
+
+	</s:Group>
+	<s:Line width="100%">
+		<s:stroke>
+			<s:SolidColorStroke color="{getStyle('lineColor')}"
+								weight="{getStyle('lineWeight')}" />
+		</s:stroke>
+	</s:Line>
+
+</s:ItemRenderer>

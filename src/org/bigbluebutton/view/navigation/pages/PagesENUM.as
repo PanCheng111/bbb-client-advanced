@@ -1,12 +1,15 @@
 package org.bigbluebutton.view.navigation.pages {
 	
 	import flash.utils.Dictionary;
+	
 	import org.bigbluebutton.view.navigation.pages.audiosettings.AudioSettingsView;
 	import org.bigbluebutton.view.navigation.pages.camerasettings.CameraSettingsView;
 	import org.bigbluebutton.view.navigation.pages.chat.ChatView;
 	import org.bigbluebutton.view.navigation.pages.chatrooms.ChatRoomsView;
 	import org.bigbluebutton.view.navigation.pages.deskshare.DeskshareView;
 	import org.bigbluebutton.view.navigation.pages.disconnect.DisconnectPageView;
+	import org.bigbluebutton.view.navigation.pages.documentDetails.DocumentDetailsView;
+	import org.bigbluebutton.view.navigation.pages.documents.DocumentsView;
 	import org.bigbluebutton.view.navigation.pages.exit.ExitPageView;
 	import org.bigbluebutton.view.navigation.pages.guest.GuestPageView;
 	import org.bigbluebutton.view.navigation.pages.locksettings.LockSettingsView;
@@ -14,13 +17,18 @@ package org.bigbluebutton.view.navigation.pages {
 	import org.bigbluebutton.view.navigation.pages.login.openroom.OpenRoomView;
 	import org.bigbluebutton.view.navigation.pages.login.openroom.recentrooms.RecentRoomsView;
 	import org.bigbluebutton.view.navigation.pages.participants.ParticipantsView;
+	import org.bigbluebutton.view.navigation.pages.pollresults.PollResultsView;
+	import org.bigbluebutton.view.navigation.pages.pollslist.PollsListView;
 	import org.bigbluebutton.view.navigation.pages.presentation.PresentationView;
 	import org.bigbluebutton.view.navigation.pages.profile.ProfileView;
 	import org.bigbluebutton.view.navigation.pages.selectparticipant.SelectParticipantView;
 	import org.bigbluebutton.view.navigation.pages.splitchat.SplitChatView;
+	import org.bigbluebutton.view.navigation.pages.splitdocuments.SplitDocumentsView;
 	import org.bigbluebutton.view.navigation.pages.splitparticipants.SplitParticipantsView;
 	import org.bigbluebutton.view.navigation.pages.splitsettings.SplitSettingsView;
 	import org.bigbluebutton.view.navigation.pages.status.StatusView;
+	import org.bigbluebutton.view.navigation.pages.takepoll.TakePollView;
+	import org.bigbluebutton.view.navigation.pages.needs.NeedsView;
 	import org.bigbluebutton.view.navigation.pages.userdetails.UserDetaisView;
 	import org.bigbluebutton.view.navigation.pages.videochat.VideoChatView;
 	
@@ -69,6 +77,17 @@ package org.bigbluebutton.view.navigation.pages {
 		
 		public static const SPLITCHAT:String = "SplitChat";
 		
+		public static const SPLITDOCUMENTS:String = "SplitDocuments";
+		
+		public static const DOCUMENTS:String = "Documents";
+		
+		public static const DOCUMENT_DETAILS:String = "DocumentDetails";
+		
+		public static const POLLS_LIST:String = "PollsList";
+		public static const TAKE_POLL:String =  "TakePoll";
+		public static const POLL_RESULTS:String = "PollResults";
+		
+		public static const NEEDS:String = "Needs";
 		/**
 		 * Especials
 		 */
@@ -98,6 +117,13 @@ package org.bigbluebutton.view.navigation.pages {
 				dic[SPLITSETTINGS] = SplitSettingsView;
 				dic[SPLITPARTICIPANTS] = SplitParticipantsView;
 				dic[SPLITCHAT] = SplitChatView;
+				dic[SPLITDOCUMENTS] = SplitDocumentsView;
+				dic[DOCUMENTS] = DocumentsView;
+				dic[DOCUMENT_DETAILS] = DocumentDetailsView;
+				dic[POLLS_LIST] = PollsListView;
+				dic[TAKE_POLL] = TakePollView;
+				dic[POLL_RESULTS] = PollResultsView;
+				dic[NEEDS] = NeedsView;
 				dicInitiated = true;
 			}
 		}

@@ -9,6 +9,7 @@ package org.bigbluebutton.view.navigation.pages.common {
 		function get menuPresentationButton():NavigationButton
 		function get menuChatButton():NavigationButton
 		function get menuParticipantsButton():NavigationButton
+		function get menuDocumentsButton():NavigationButton
 		function get pushToTalkButton():Button;
 	}
 }

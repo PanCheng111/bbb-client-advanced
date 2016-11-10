@@ -3,7 +3,9 @@
 				xmlns:s="library://ns.adobe.com/flex/spark"
 				xmlns:mx="library://ns.adobe.com/flex/mx"
 				xmlns:view="org.bigbluebutton.core.view.*"
-				xmlns:whiteboard="org.bigbluebutton.view.navigation.pages.whiteboard.*">
+				xmlns:whiteboard="org.bigbluebutton.view.navigation.pages.whiteboard.*"
+				xmlns:toolbar="org.bigbluebutton.view.navigation.pages.whiteboard.toolbar.*"
+				>
 
 	<s:Group id="content0"
 			 width="100%"
@@ -25,6 +27,28 @@
 						 width="100%"
 						 height="100%" />
 			<whiteboard:WhiteboardCanvas id="whiteboardCanvas0" />
+			<toolbar:WhiteboardToolbar id="whiteboardtoolbar0" />
 		</s:Group>
+		<s:Panel id="presCtrlBar" name="presCtrlBar" width="100%" styleName="presentationWindowControlsStyle" >
+			<s:controlBarLayout> 
+				<s:HorizontalLayout paddingTop="2" paddingBottom="2" verticalAlign="middle" gap="5"/> 
+			</s:controlBarLayout>
+			<s:HGroup id="presenterControls" width="100%" height="100%" visible="false" includeInLayout="false" horizontalAlign="center">
+				<!--
+				<s:Button id="uploadPres" visible="false" height="30" styleName="presentationUploadButtonStyle" 
+						   click="onUploadButtonClicked()"/>
+				<s:Button id="backButton" visible="false" width="45" height="30" styleName="presentationBackButtonStyle"
+							   toolTip="{ResourceUtil.getInstance().getString('bbb.presentation.backBtn.toolTip')}" click="gotoPreviousSlide()"/>
+				-->
+				<s:Button id="btnSlideNum0" visible="false" label="" />
+				<s:Button id="forwardButton0" visible="false" width="45" height="30" styleName="presentationForwardButtonStyle"/>    				
+				<mx:Spacer width="50%" id="spacer3"/>
+				<s:HSlider id="zoomSlider0" visible="false" styleName="presentationZoomSliderStyle"
+								minimum="100" maximum="400"
+								useHandCursor="true" snapInterval="5" liveDragging="true" width="100"/>
+				<s:Button id="btnFitToWidth0" visible="false" width="30" height="30" styleName="presentationFitToWidthButtonStyle"/>
+				<s:Button id="btnFitToPage0" visible="false" width="30" height="30" styleName="presentationFitToPageButtonStyle" />
+			</s:HGroup>
+		</s:Panel>
 	</s:Group>
 </view:NoTabView>

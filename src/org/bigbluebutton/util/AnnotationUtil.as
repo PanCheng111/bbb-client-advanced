@@ -17,6 +17,7 @@ package org.bigbluebutton.util {
 				return null;
 			if (an.status == undefined || an.status == null || an.status == "")
 				return null;
+			trace("----get annotation whiteboardId=", an.whiteboardId);
 			switch (an.type) {
 				case AnnotationType.PENCIL:
 					return new PencilAnnotation(an.type, an.id, an.whiteboardId, an.status, an.color, an.thickness, an.transparency, an.points);

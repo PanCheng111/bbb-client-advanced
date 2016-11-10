@@ -17,6 +17,9 @@ package org.bigbluebutton.view.navigation.pages.status {
 	import robotlegs.bender.bundles.mvcs.Mediator;
 	import spark.events.IndexChangeEvent;
 	
+	import mx.core.mx_internal;
+	use namespace mx_internal;
+	
 	public class StatusViewMediator extends Mediator {
 		
 		[Inject]

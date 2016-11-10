@@ -67,7 +67,12 @@ package org.bigbluebutton.view.navigation {
 					break;
 				}
 			}
-			if (pageName == PagesENUM.PARTICIPANTS || pageName == PagesENUM.PRESENTATION || pageName == PagesENUM.VIDEO_CHAT || pageName == PagesENUM.CHATROOMS) {
+			if (pageName == PagesENUM.PARTICIPANTS 
+				|| pageName == PagesENUM.PRESENTATION 
+				|| pageName == PagesENUM.VIDEO_CHAT 
+				|| pageName == PagesENUM.CHATROOMS 
+				|| pageName == PagesENUM.DOCUMENTS
+				|| pageName == PagesENUM.POLLS_LIST) {
 				view.popAll();
 				view.pushView(PagesENUM.getClassfromName(pageName), null, null, transition);
 			} else if (pageRemoved) {

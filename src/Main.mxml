@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx" 
 			   xmlns:top="org.bigbluebutton.top.view.*"
 			   xmlns:navigation="org.bigbluebutton.view.navigation.*"
 			   xmlns:presentation="org.bigbluebutton.view.navigation.pages.presentation.*"
@@ -51,16 +52,24 @@
 			import org.bigbluebutton.view.navigation.pages.login.openroom.OpenRoomConfig;
 			import org.bigbluebutton.view.navigation.pages.login.openroom.recentrooms.RecentRoomsConfig;
 			import org.bigbluebutton.view.navigation.pages.participants.ParticipantsConfig;
+			import org.bigbluebutton.view.navigation.pages.documents.DocumentsConfig;
+			import org.bigbluebutton.view.navigation.pages.documentDetails.DocumentDetailsConfig;
 			import org.bigbluebutton.view.navigation.pages.presentation.PresentationConfig;
 			import org.bigbluebutton.view.navigation.pages.profile.ProfileConfig;
 			import org.bigbluebutton.view.navigation.pages.selectparticipant.SelectParticipantConfig;
 			import org.bigbluebutton.view.navigation.pages.splitchat.SplitChatConfig;
 			import org.bigbluebutton.view.navigation.pages.splitparticipants.SplitParticipantsConfig;
 			import org.bigbluebutton.view.navigation.pages.splitsettings.SplitSettingsConfig;
+			import org.bigbluebutton.view.navigation.pages.splitdocuments.SplitDocumentsConfig;
 			import org.bigbluebutton.view.navigation.pages.status.StatusConfig;
 			import org.bigbluebutton.view.navigation.pages.userdetails.UserDetaisConfig;
 			import org.bigbluebutton.view.navigation.pages.videochat.VideoChatConfig;
 			import org.bigbluebutton.view.navigation.pages.whiteboard.WhiteboardConfig;
+			import org.bigbluebutton.view.navigation.pages.whiteboard.toolbar.WhiteboardToolbarConfig;
+			import org.bigbluebutton.view.navigation.pages.pollslist.PollsListConfig;
+			import org.bigbluebutton.view.navigation.pages.takepoll.TakePollConfig;
+			import org.bigbluebutton.view.navigation.pages.pollresults.PollResultsConfig;
+			import org.bigbluebutton.view.navigation.pages.needs.NeedsConfig;
 			import org.bigbluebutton.view.ui.NavigationButtonConfig;
 			import org.bigbluebutton.view.ui.RecordingStatusConfig;
 			import org.bigbluebutton.view.ui.SwapCameraConfig;
@@ -149,6 +158,14 @@
 					.configure(AudioSettingsConfig)
 					.configure(MenuButtonsConfig)
 					.configure(WhiteboardConfig)
+					.configure(DocumentsConfig)
+					.configure(DocumentDetailsConfig)
+					.configure(SplitDocumentsConfig)
+					.configure(PollsListConfig)
+					.configure(TakePollConfig)
+					.configure(PollResultsConfig)
+					.configure(NeedsConfig)
+					.configure(WhiteboardToolbarConfig)
 					.configure(new ContextView(this));
 				// If you wish to change the log level then uncomment the line below and set 
 				// the logLevel to the value you desire. The default logLevel is DEBUG, which 

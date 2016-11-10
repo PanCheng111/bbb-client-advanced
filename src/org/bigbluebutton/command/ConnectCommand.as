@@ -15,6 +15,7 @@ package org.bigbluebutton.command {
 	import org.bigbluebutton.core.IVideoConnection;
 	import org.bigbluebutton.core.IVoiceConnection;
 	import org.bigbluebutton.core.IWhiteboardService;
+	import org.bigbluebutton.core.IPollService;
 	import org.bigbluebutton.model.IConferenceParameters;
 	import org.bigbluebutton.model.IUserSession;
 	import org.bigbluebutton.model.IUserUISession;
@@ -75,6 +76,9 @@ package org.bigbluebutton.command {
 		[Inject]
 		public var saveData:ISaveData;
 		
+		[Inject]
+		public var pollService:IPollService;
+		
 		override public function execute():void {
 			loadConfigOptions();
 			connection.uri = uri;
@@ -88,6 +92,7 @@ package org.bigbluebutton.command {
 			userSession.mainConnection = connection;
 			chatService.setupMessageSenderReceiver();
 			whiteboardService.setupMessageSenderReceiver();
+			pollService.setupMessageSenderReceiver();
 			userSession.userId = connection.userId;
 			// Set up users message sender in order to send the "joinMeeting" message:
 			usersService.setupMessageSenderReceiver();
@@ -180,6 +185,9 @@ package org.bigbluebutton.command {
 			presentationService.getPresentationInfo();
 			usersService.queryForParticipants();
 			usersService.queryForRecordingStatus();
+			
+			pollService.getPolls();
+			
 			userSession.successJoiningMeetingSignal.remove(successJoiningMeeting);
 			userSession.unsuccessJoiningMeetingSignal.remove(unsuccessJoiningMeeting);
 			//usersService.getRoomLockState();*/

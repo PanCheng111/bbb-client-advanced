@@ -5,6 +5,7 @@ package org.bigbluebutton.core {
 	import org.bigbluebutton.core.WhiteboardMessageSender;
 	import org.bigbluebutton.model.IMessageListener;
 	import org.bigbluebutton.model.IUserSession;
+	import org.bigbluebutton.modules.whiteboard.events.WhiteboardDrawEvent;
 	
 	public class WhiteboardService implements IWhiteboardService {
 		
@@ -26,6 +27,7 @@ package org.bigbluebutton.core {
 		
 		public function getAnnotationHistory(presentationID:String, pageNumber:int):void {
 			whiteboardMessageSender.requestAnnotationHistory(presentationID + "/" + pageNumber);
+		//	whiteboardMessageSender.toggleGrid();
 		}
 		
 		public function changePage(pageNum:Number):void {
@@ -35,20 +37,20 @@ package org.bigbluebutton.core {
 			//}
 		}
 		
-		public function undoGraphic():void {
-			whiteboardMessageSender.undoGraphic()
+		public function undoGraphic(wbId:String):void {
+			whiteboardMessageSender.undoGraphic(wbId);
 		}
 		
-		public function clearBoard():void {
-			whiteboardMessageSender.clearBoard();
+		public function clearBoard(wbId:String):void {
+			whiteboardMessageSender.clearBoard(wbId);
 		}
 		
 		public function sendText():void {
 			whiteboardMessageSender.sendText();
 		}
 		
-		public function sendShape():void {
-			whiteboardMessageSender.sendShape();
+		public function sendShape(e:WhiteboardDrawEvent):void {
+			whiteboardMessageSender.sendShape(e);
 		}
 		
 		public function setActivePresentation():void {

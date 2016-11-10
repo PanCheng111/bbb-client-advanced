@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view:NoTabView xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				xmlns:mx="library://ns.adobe.com/flex/mx"
+				xmlns:view="org.bigbluebutton.core.view.*"
+				xmlns:ui="org.bigbluebutton.view.ui.*">
+	<s:Scroller width="100%"
+				height="100%">
+		<s:VGroup width="100%"
+				  height="100%"
+				  horizontalAlign="center">
+
+			<s:List id="moodList0"
+					width="100%"
+					itemRenderer="org.bigbluebutton.view.navigation.pages.status.StatusItemRenderer"
+					height="100%"
+					labelField="data">
+				<s:ArrayList>
+					<fx:Object data="{resourceManager.getString('resources', 'profile.settings.clearMood')}"
+							   signal="NO_STATUS" />
+					<fx:Object data="请给我一杯水"
+							   signal="NEED_WATER" />
+					<fx:Object data="请给我一支笔"
+							   signal="NEED_PENCIL" />
+					<fx:Object data="请给我一个话筒"
+							   signal="NEED_MIC" />
+				</s:ArrayList>
+			</s:List>
+		</s:VGroup>
+	</s:Scroller>
+</view:NoTabView>

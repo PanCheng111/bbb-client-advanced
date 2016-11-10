@@ -96,6 +96,7 @@ package org.bigbluebutton.core {
 		private function handleMoveCallback(m:Object):void {
 			var msg:Object = JSON.parse(m.msg);
 			trace("PresentMessageReceiver::handleMoveCallback()");
+			trace("---move args: ", msg.xOffset, msg.yOffset, msg.widthRatio, msg.heightRatio);
 			userSession.presentationList.setViewedRegion(msg.xOffset, msg.yOffset, msg.widthRatio, msg.heightRatio);
 		/* Properties of msg:
 		   current

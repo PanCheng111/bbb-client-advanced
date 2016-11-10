@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/16.0">
+<application xmlns="http://ns.adobe.com/air/application/19.0">
 
 	<!-- Adobe AIR Application Descriptor File Template.
 
@@ -15,7 +15,7 @@
 
 	<!-- A universally unique application identifier. Must be unique across all AIR applications.
 	Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
-	<id>com.mconf.mconfmobile</id>
+	<id>Main</id>
 
 	<!-- Used as the filename for the application. Required. -->
 	<filename>Mconf-Mobile</filename>
@@ -313,7 +313,11 @@
 					<string>org.bigbluebutton</string>
 				</dict>
 			</array>
-	 
+	 		<key>NSAppTransportSecurity</key>
+	 		<dict>
+	 			<key>NSAllowsArbitraryLoads</key>
+	 			<true />
+	 		</dict>
 		]]>
 		</InfoAdditions>
 		<requestedDisplayResolution>high</requestedDisplayResolution>

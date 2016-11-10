@@ -172,9 +172,10 @@ in accordance with the terms of the license agreement accompanying it.
 	<!---  @copy spark.components.supportClasses.ButtonBase#labelDisplay -->
 	<s:Label id="labelDisplay"
 			 verticalAlign="middle"
-			 maxDisplayedLines="1"
+			 maxDisplayedLines="-1"
 			 width="100%"
-			 textAlign="center"
+			 left="{hostComponent.getStyle('width')}"
+			 textAlign="left"
 			 verticalCenter="2"
 			 fontWeight="normal" />
 

@@ -16,8 +16,13 @@ package org.bigbluebutton.view.navigation.pages.login.openroom {
 			return inputRoom0;
 		}
 		
-		public function get goButton():Button {
-			return goButton0;
+		
+		public function get password():TextInput {
+			return password0;
+		}
+		
+		public function get recentRoomsBtn():Button {
+			return recentRoomsBtn0;
 		}
 		
 		public function dispose():void {

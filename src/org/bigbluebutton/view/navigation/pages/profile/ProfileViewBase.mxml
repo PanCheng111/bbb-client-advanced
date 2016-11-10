@@ -32,6 +32,13 @@
 					  label="{resourceManager.getString('resources', 'profile.status.title')}"
 					  styleName="videoAudioSettingStyle contentFontSize" />
 
+			<s:Button id="needsBtn0"
+					  visible.bbb="false"
+					  includeInLayout.bbb="false"
+					  width="100%"
+					  label="会议物品需求"
+					  styleName="pencilSettingsButtonStyle profileSettingsButtonStyle videoAudioSettingStyle contentFontSize" />
+			
 			<s:Button id="handBtn0"
 					  visible.mconf="false"
 					  includeInLayout.mconf="false"

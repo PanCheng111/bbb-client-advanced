@@ -72,12 +72,18 @@ package org.bigbluebutton.view.navigation.pages.common {
 			userSession.logoutSignal.add(loggingOutHandler);
 			userSession.assignedDeskshareSignal.add(configDeskshare);
 			userSession.pushToTalkSignal.add(pushToTalkChange);
+			userSession.pollModel.pollsChangedSignal.add(onPollChange);
 			pushToTalkChange();
 		}
 		
+		public function onPollChange(change:int, pollID:String):void {
+			view.menuPollsButton.visible = view.menuPollsButton.includeInLayout = true;
+		}
+			
 		private function stageOrientationChangingHandler(e:Event):void {
 			view.chatBtn0.navigateTo = FlexGlobals.topLevelApplication.isTabletLandscape() ? [PagesENUM.SPLITCHAT] : [PagesENUM.CHATROOMS, PagesENUM.CHAT, PagesENUM.SELECT_PARTICIPANT]
 			view.participantsBtn0.navigateTo = FlexGlobals.topLevelApplication.isTabletLandscape() ? [PagesENUM.SPLITPARTICIPANTS] : [PagesENUM.PARTICIPANTS, PagesENUM.USER_DETAIS]
+			view.documentsBtn0.navigateTo = FlexGlobals.topLevelApplication.isTabletLandscape() ? [PagesENUM.SPLITDOCUMENTS] : [PagesENUM.DOCUMENTS, PagesENUM.DOCUMENT_DETAILS]
 			//e.preventDefault();
 		}
 		
