@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Use Flash Builder to develop it.
 
 * clone this repo
